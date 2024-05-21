@@ -1,13 +1,13 @@
 package com.example;
 
 public class Movie {
-    String name;
-    int year;
-    boolean includedInPlan;
-    double review;
-    double sumRates;
-    int totalReviews;
-    int duration;
+    private String name;
+    private int year;
+    private boolean includedInPlan;
+    private double review;
+    private double sumRates;
+    private int totalReviews;
+    private int duration;
 
     void exibeFichaTecnica() {
         System.out.println("Movie: " + name);
@@ -27,5 +27,61 @@ public class Movie {
 
     double getAverageRate() {
         return sumRates / totalReviews;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+
+    public boolean isIncludedInPlan() {
+        return includedInPlan;
+    }
+
+    public void setIncludedInPlan(boolean includedInPlan) {
+        this.includedInPlan = includedInPlan;
+    }
+
+    public double getReview() {
+        return review;
+    }
+
+    public void setReview(double review) {
+        this.review = review;
+    }
+
+    public double getSumRates() {
+        return sumRates;
+    }
+
+    public void setSumRates(double sumRates) {
+        this.sumRates = sumRates;
+    }
+
+    public int getTotalReviews() {
+        return totalReviews;
+    }
+
+    public void setTotalReviews(int totalReviews) {
+        this.totalReviews = totalReviews;
+    }
+
+    public int getDuration() {
+        return duration;
+    }
+
+    public void setDuration(int duration) {
+        this.duration = duration;
     }
 }
