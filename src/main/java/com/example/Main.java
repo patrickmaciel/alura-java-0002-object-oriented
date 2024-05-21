@@ -13,5 +13,33 @@ public class Main {
         myMovie.avalia(5);
         myMovie.avalia(7);
         myMovie.exibeFichaTecnica();
+
+        System.out.println("");
+        System.out.println("---------------------------");
+        System.out.println("");
+
+        Music music = new Music("Bohemian Rhapsody", "Queen", 1975);
+        music.show();
+
+        breakLine();
+
+        Person person = new Person("John", 30, 1.75, 85);
+        person.show();
+
+        breakLine();
+
+        Car car = new Car("Fiat", 2019, "Red");
+        car.show();
+
+        breakLine();
+
+        Student student = new Student("Alice", 20);
+        student.show();
+    }
+
+    public static void breakLine() {
+        System.out.println("");
+        System.out.println("---------------------------");
+        System.out.println("");
     }
 }
