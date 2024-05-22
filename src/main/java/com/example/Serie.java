@@ -1,6 +1,6 @@
 package com.example;
 
-public class Serie extends Title {
+public class Serie extends Title implements Classification {
   private int seasons;
   private int episodes;
   private int episodeDuration;
@@ -30,7 +30,27 @@ public class Serie extends Title {
   }
 
   @Override
+  public int getDuration() {
+    return getSeasons() * getEpisodes() * getEpisodeDuration();
+  }
+
+  @Override
   public int getDurationInMinutes() {
     return getSeasons() * getEpisodes() * getEpisodeDuration();
+  }
+
+  @Override
+  public int classify() {
+    if (getTotalReviews() >= 9) {
+      return 5;
+    } else if (getTotalReviews() >= 7) {
+      return 4;
+    } else if (getTotalReviews() >= 5) {
+      return 3;
+    } else if (getTotalReviews() >= 3) {
+      return 2;
+    } else {
+      return 1;
+    }
   }
 }
