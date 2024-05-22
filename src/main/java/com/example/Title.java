@@ -12,6 +12,7 @@ public class Title {
   void exibeFichaTecnica() {
     System.out.println("Movie: " + name);
     System.out.println("Year: " + year);
+    System.out.println("Duration: " + getDurationInMinutes());
     System.out.println("Included in plan: " + includedInPlan);
     System.out.println("Review: " + review);
     System.out.println("Sum Rate: " + sumRates);
@@ -25,8 +26,12 @@ public class Title {
     sumRates += rate;
   }
 
-  double getAverageRate() {
+  public double getAverageRate() {
     return sumRates / totalReviews;
+  }
+
+  public int getDurationInMinutes() {
+    return duration * 60;
   }
 
   public String getName() {

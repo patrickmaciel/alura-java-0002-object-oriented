@@ -14,6 +14,20 @@ public class Main {
         myMovie.avalia(7);
         myMovie.exibeFichaTecnica();
 
+        breakLine();
+
+        Serie lost = new Serie();
+        lost.setName("LOST");
+        lost.setYear(1999);
+        lost.setIncludedInPlan(true);
+        lost.setSeasons(10);
+        lost.setEpisodes(159);
+        lost.setEpisodeDuration(45);
+        lost.avalia(8);
+        lost.avalia(5);
+        lost.avalia(7);
+        lost.exibeFichaTecnica();
+        System.out.println("Duration: " + lost.getDurationInMinutes());
     }
 
     public static void breakLine() {
